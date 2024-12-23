@@ -1,0 +1,52 @@
+.chartWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.chartContainer {
+  width: 500px;
+  margin: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chartTitle {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.filtersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+
+.filterOption {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filterOption input[type="checkbox"] {
+  margin: 0;
+}
+
+.filterLabel {
+  font-size: 14px;
+  color: #333;
+}
