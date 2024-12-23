@@ -1,0 +1,34 @@
+/* DisplayTime.module.css */
+.container {
+  margin: 10px auto;
+  padding: 20px;
+}
+
+.filtersContainer {
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.select,
+.input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.select {
+  min-width: 120px;
+}
+
+.input {
+  width: 100px;
+}
+
+.chartContainer {
+  width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+}
