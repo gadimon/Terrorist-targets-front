@@ -5,6 +5,8 @@ import DisplayAttack from "../components/displayAttack/DisplayAttack";
 import DisplayRegion from "../components/displayRegions/DisplayRegion";
 import DisplayTime from "../components/displayTime/DisplayTima";
 import DisplayOrganization from "../components/displayOrganizations/DisplayOrganizations ";
+import DisplayGroupsByYear from "../components/displayAttackByYear/DisplayGroupsByYear";
+import DisplayGroupRegions from "../components/displayGroupRegions/DisplayGroupRegions";
 
 const AppRouter: React.FC = () => {
   return (
@@ -12,6 +14,8 @@ const AppRouter: React.FC = () => {
       <nav className={styles.nav}>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/attacks">Attacks</NavLink>
+        <NavLink to="/groups">Groups</NavLink>
+        <NavLink to="/groupRegions">GroupRegions</NavLink>
         <NavLink to="/regions">Regions</NavLink>
         <NavLink to="/time">Time</NavLink>
         <NavLink to="/organizations">Organizations</NavLink>
@@ -19,6 +23,8 @@ const AppRouter: React.FC = () => {
 
       <Routes>
         <Route path="/attacks" element={<DisplayAttack />} />
+        <Route path="/groups" element={<DisplayGroupsByYear />} />
+        <Route path="/groupRegions" element={<DisplayGroupRegions />} />
         <Route path="/regions" element={<DisplayRegion />} />
         <Route path="/time" element={<DisplayTime />} />
         <Route path="/organizations" element={<DisplayOrganization />} />
