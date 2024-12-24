@@ -28,7 +28,8 @@ const DisplayTime = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      let url = "http://localhost:3000/api/analysis/incident-trends";
+      let url =
+        "https://terrorist-targets.onrender.com/api/analysis/incident-trends";
       switch (selectedFilter) {
         case "specific":
           url += `?startOfYear=${selectedYear}&endOfYear=${selectedYear}&startOfMonth=1&endOfMonth=12`;

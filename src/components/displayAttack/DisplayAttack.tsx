@@ -21,7 +21,7 @@ const AttacksChart = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/analysis/deadliest-attack-types"
+          "https://terrorist-targets.onrender.com/api/analysis/deadliest-attack-types"
         );
         const data = await response.json();
         const sortedData = [...data].sort(

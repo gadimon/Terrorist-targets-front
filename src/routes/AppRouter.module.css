@@ -1,0 +1,28 @@
+/* ApRouter.module.css */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+nav a.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}

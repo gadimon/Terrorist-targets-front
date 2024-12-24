@@ -1,13 +1,12 @@
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-import DisplayAttack from "./components/displayAttack/DisplayAttack";
-import DisplayRegion from "./components/displayRegions/DisplayRegion";
-import DisplayTime from "./components/displayTime/DisplayTima";
+import AppRoute from "./routes/AppRoute";
 
 function App() {
   return (
-    <DisplayAttack />
-    // <DisplayRegion />
-    // <DisplayTime />
+    <BrowserRouter>
+      <AppRoute />
+    </BrowserRouter>
   );
 }
 

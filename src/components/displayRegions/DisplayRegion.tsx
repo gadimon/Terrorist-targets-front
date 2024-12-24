@@ -19,14 +19,14 @@ interface RegionData {
   long: number;
 }
 
-const MapComponent: React.FC = () => {
+const DisplayRegion: React.FC = () => {
   const [regionsData, setRegionsData] = useState<RegionData[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/analysis/highest-casualty-regions"
+          "https://terrorist-targets.onrender.com/api/analysis/highest-casualty-regions"
         );
         const data = await response.json();
         const validData = data.filter(
@@ -77,4 +77,4 @@ const MapComponent: React.FC = () => {
   );
 };
 
-export default MapComponent;
+export default DisplayRegion;

@@ -1,0 +1,46 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.chartSection,
+.mapSection {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.filters {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  min-width: 120px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.chart {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.mapSection {
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+}
