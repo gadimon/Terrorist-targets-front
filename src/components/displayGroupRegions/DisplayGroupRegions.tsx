@@ -16,31 +16,46 @@ interface RegionData {
   total: number;
   region: string;
   country: string;
+  lat?: number;
+  long?: number;
 }
 
 const DisplayGroupRegions: React.FC = () => {
+  const [groupName, setGroupName] = useState<string>("");
   const [regionsData, setRegionsData] = useState<RegionData[]>([]);
 
-  const fetchGroupRegions = async (groupName: string) => {
+  const fetchGroupRegions = async () => {
+    if (!groupName.trim()) return;
+
     try {
-      const response = await fetch(
-        `https://terrorist-targets.onrender.com/api/relationships/deadliest-regions/?name_group=${groupName}`
-      );
+      const url = `https://terrorist-targets.onrender.com/api/relationships/deadliest-regions?groupName=${groupName}`;
+      const response = await fetch(url);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const data = await response.json();
       setRegionsData(data);
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error fetching regions:", error);
     }
   };
 
   return (
     <>
-      <input
-        type="text"
-        placeholder="Enter Group Name"
-        onChange={(e) => fetchGroupRegions(e.target.value)}
-        style={{ marginBottom: "20px", width: "100%", padding: "10px" }}
-      />
+      <div style={{ display: "flex", margin: "20px" }}>
+        <input
+          type="text"
+          placeholder="Enter Group Name"
+          value={groupName}
+          onChange={(e) => setGroupName(e.target.value)}
+          style={{ flexGrow: 1, marginRight: "10px", padding: "10px" }}
+        />
+        <button onClick={fetchGroupRegions} style={{ padding: "10px" }}>
+          Search
+        </button>
+      </div>
 
       <div style={{ width: "800px", height: "600px", margin: "20px auto" }}>
         <MapContainer
