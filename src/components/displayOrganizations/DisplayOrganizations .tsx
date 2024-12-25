@@ -78,7 +78,7 @@ const DisplayOrganizations: React.FC = () => {
     setIsLoading(true);
     try {
       const response = await fetch(
-        "http://localhost:3000/api/analysis/highest-casualty-regions"
+        "https://terrorist-targets.onrender.com/api/analysis/highest-casualty-regions"
       );
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
